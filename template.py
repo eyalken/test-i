@@ -25,6 +25,7 @@ class Product:
     def visualizeAtHome(self, photo):
         pass
 
+
 class ClothesProducts(Product):
     def __init__(self, name, id, price, isNew):
         super().__init__(name, id, price)
@@ -35,6 +36,7 @@ class ClothesProducts(Product):
 
     def set_isNew(self, isNew):
         self._isNew = isNew
+
 
 class FurnitureProducts(Product):
     def __init__(self, name, id, price, height, weight, width):
@@ -61,6 +63,7 @@ class FurnitureProducts(Product):
     def set_width(self, width):
         self._width = width
 
+
 class VegetablesProducts(Product):
     def __init__(self, name, id, price, freshness):
         super().__init__(name, id, price)
@@ -72,15 +75,19 @@ class VegetablesProducts(Product):
     def set_freshness(self, freshness):
         self._freshness = freshness
 
+
 class MilkProducts(Product):
     def __init__(self, name, id, price):
         super().__init__(name, id, price)
 
 
-product = Product("T-shirt", 12345, 19.99)
+products = {
+    FurnitureProducts("3 Legs Chair", 12345, 100,10,101,20),
+    FurnitureProducts("Sofa - Black", 12346, 200,10,101,20),
+    FurnitureProducts("Sofa - Red ", 12347, 250,10,101,20),
+    FurnitureProducts("Table - Vintage", 12348, 100,10,101,20),
+    ClothesProducts("T-shirt", 12349, 200,True)
+}
 
-# Set the name of the product to "Shirt"
-product.set_name("Shirt")
-
-print("The name of the product is now", product.get_name())
-
+for product in products:
+    print("The name of the product is now", product.get_name(), ",price is:", product.get_price())
