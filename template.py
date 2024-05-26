@@ -3,8 +3,8 @@
 # no need to serialze to/from DB - 
 # never change for each product seperatly - create rules
 # first rule 10% discount for all products
-# change the structure just once (not in secod phase) 
-# no cart 
+# change the structure just once (not in second phase) 
+# no cart - no combination of products
 #
 class Product:
     def __init__(self, name, id, price):
