@@ -1,7 +1,7 @@
 # create discount system
 # no need to serialze to/from DB - 
 # never change for each product seperatly - create rules
-# first roll 10% discount for all products
+# first role 10% discount for all products
 # change the structure just once (not in secod phase) 
 # no cart 
 
